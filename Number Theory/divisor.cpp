@@ -31,6 +31,15 @@ void square_root(int n)
     }
 }
 
+// approach 2 -> time comlexit is O(ln(n))
+void divisors(int i, int n)
+{
+    for (int j = i; j <= n; j += i)
+    {
+        cnt[j]++;
+    }
+}
+
 int main()
 {
     fastio;
@@ -39,7 +48,8 @@ int main()
 
     for (int i = 1; i <= n; i++)
     {
-        square_root(i);
+        // square_root(i);
+        divisors(i, n);
     }
 
     for (int i = 1; i <= n; i++)
